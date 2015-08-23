@@ -11,6 +11,6 @@
     <title>SimpleTest</title>
 </head>
 <body>
-    <div>@Model.Content.Take(5)</div>
+    <div>@string.Join("", Model.Content.Take(5))</div>
 </body>
 </html>

@@ -9,7 +9,7 @@ namespace RazorTest.TEST_FILES
 {
     public class TemplateManager : ITemplateManager
     {
-        private static readonly string usingStatement = "@model dynamic" + Environment.NewLine;
+      //  private static readonly string usingStatement = "@model dynamic" + Environment.NewLine;
 
         public ITemplateSource Resolve(ITemplateKey key)
         {
@@ -32,7 +32,9 @@ namespace RazorTest.TEST_FILES
 
             try
             {
-                templateHtml = usingStatement + File.ReadAllText(serverPath);
+                //templateHtml = usingStatement + File.ReadAllText(serverPath);
+
+                templateHtml = File.ReadAllText(serverPath);
             }
             catch (DirectoryNotFoundException)
             {
